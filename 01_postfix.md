@@ -92,7 +92,7 @@ tcp        0      0 192.168.1.171:25        0.0.0.0:*               LISTEN      
 create "dbadmin" user :
 ```
 useradd dbadmin
-echo dbadmin:oracle | chpasswd
+echo dbadmin:ILovePlayStation | chpasswd
 ```
 
 emails for "dbadmin" user will be stored in following file :
