@@ -89,6 +89,12 @@ tcp        0      0 192.168.1.171:25        0.0.0.0:*               LISTEN      
 
 #### ASSUMPTION : in this article, we assume that "dbadmin" user will receive emails
 
+create "dbadmin" user :
+```
+useradd dbadmin
+echo dbadmin:oracle | chpasswd
+```
+
 emails for "dbadmin" user will be stored in following file :
 ```
 /var/spool/mail/dbadmin
