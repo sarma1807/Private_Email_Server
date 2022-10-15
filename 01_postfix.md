@@ -130,6 +130,22 @@ errors: dbadmin, anilkm
 info:   dbadmin
 ```
 
+WARNING for duplicate entries :
+```
+cat /etc/aliases | egrep -i "alerts|errors|info"
+
+# if some of these entries already exist in /etc/aliases file,
+# then we have to either comment out already pre-existing entries
+# or
+# merge them into a single entry
+
+# if not when we execute next step, we might get a warning message similar to below :
+
+[root@mysmtp ~]# /usr/bin/newaliases
+postalias: warning: /etc/aliases.db: duplicate entry: "info"
+
+```
+
 run following command to update aliases :
 ```
 /usr/bin/newaliases
