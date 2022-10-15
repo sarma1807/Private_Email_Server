@@ -26,6 +26,7 @@ configure email :
          name : dbadmin
 email address : dbadmin@mysmtp.OracleByExample.com
      password : <provide password>
+     # HINT : we configured this password as "ILovePlayStation" in first step during "postfix" configuration
 
 click "continue"
 
@@ -40,3 +41,10 @@ server settings -> security settings ->
        connection security   : starttls
        authentication method : normal password
 ```
+
+---
+
+if everything goes well, we should see something similar to following :
+
+![Thunderbird_01.jpg](https://github.com/sarma1807/Private_Email_Server/blob/main/Screenshots/Thunderbird_01.jpg) <br><br>
+
