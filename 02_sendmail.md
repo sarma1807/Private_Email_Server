@@ -20,17 +20,23 @@ add following entries :
 Check if sendmail is already installed on the client VM :
 ```
 rpm -qa | grep sendmail
+# or
+dnf list --installed | grep sendmail
 ```
 
 Check for all the available sendmail related packages :
 ```
 yum list *sendmail*
+# or
+dnf search *sendmail*
 ```
 
 Install sendmail related packages :
 ```
 yum install sendmail --assumeyes
 yum install sendmail-cf --assumeyes
+# or
+dnf install sendmail* --assumeyes
 ```
 
 ---
@@ -42,8 +48,17 @@ Modify the sendmail configuration file :
 vi /etc/mail/sendmail.mc
 ```
 
-add following entry :
+add following entry at the end of the file :
 ```
+define(`SMART_HOST', `mysmtp.OracleByExample.com')dnl
+```
+
+verify following entry :
+```
+cat /etc/mail/sendmail.mc | grep -i SMART_HOST
+
+# expected output should contain 2 entries, similar to following :
+dnl define(`SMART_HOST', `smtp.your.provider')dnl
 define(`SMART_HOST', `mysmtp.OracleByExample.com')dnl
 ```
 
@@ -57,6 +72,9 @@ previous make will generate a new ` /etc/mail/sendmail.cf ` file.
 verify the smtp configuration :
 ```
 cat /etc/mail/sendmail.cf | grep DS | grep -v "#"
+
+# expected output should contain 1 entry, similar to following :
+DSmysmtp.OracleByExample.com
 ```
 
 DISABLE sendmail to listen for remote email on port 25 : only allows local connections :
@@ -75,7 +93,7 @@ commands to status/enable/start sendmail as service :
 ```
 systemctl status sendmail.service
 systemctl enable sendmail.service
-systemctl start sendmail.service
+systemctl start  sendmail.service
 ```
 
 ---
