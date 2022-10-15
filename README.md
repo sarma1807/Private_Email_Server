@@ -59,3 +59,11 @@ sendmail.x86_64    8.16.1-10.el9     @appstream
 dovecot.x86_64     1:2.3.16-7.el9    @appstream
 Thunderbird 102.3.3 (64-bit)
 ```
+
+---
+
+### New Requirements
+```
+currently using "sendmail"
+in future can we support "mailx" too ?
+```
