@@ -168,3 +168,28 @@ curl 192.168.1.171:25
 220 mysmtp.OracleByExample.com ESMTP Postfix (3.5.8)
 # first line in the output is the pre-defined smtpd_banner
 ```
+
+curl HTTP/0.9 NOT ALLOWED ERROR :
+```
+# check curl version
+
+$ curl --version
+curl 7.76.1 
+
+# NOTE : since curl version 7.66.0, HTTP/0.9 is disabled by default
+
+# use override flags
+
+curl --http0.9 192.168.1.171:25
+
+# output :
+
+$ curl --http0.9 192.168.1.171:25
+220 mysmtp.OracleByExample.com ESMTP Postfix (3.5.9)
+221 2.7.0 Error: I can break rules, too. Goodbye.
+$
+
+# first line in the output is the pre-defined smtpd_banner
+
+```
+
