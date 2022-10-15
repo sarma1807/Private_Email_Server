@@ -66,7 +66,18 @@ mail_location = mbox:~/mail:INBOX=/var/spool/mail/%u
 
 assign mail group to dbadmin user
 ```
+# first verify current settings for dbadmin user :
+id dbadmin
+# my output : uid=1001(dbadmin) gid=1001(dbadmin) groups=1001(dbadmin)
+
+
+# add mail group :
 usermod --append --groups mail dbadmin
+
+
+# verify settings for dbadmin user after above change :
+id dbadmin
+# my output : uid=1001(dbadmin) gid=1001(dbadmin) groups=1001(dbadmin),12(mail)
 ```
 
 ---
@@ -89,7 +100,7 @@ check if dovecot is running and listening on specific ip:port :
 ```
 netstat -antp | egrep "Proto|dovecot"
 
-# output :
+# sample output :
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
 tcp        0      0 0.0.0.0:993             0.0.0.0:*               LISTEN      1847/dovecot
 tcp        0      0 0.0.0.0:995             0.0.0.0:*               LISTEN      1847/dovecot
@@ -97,3 +108,4 @@ tcp        0      0 0.0.0.0:110             0.0.0.0:*               LISTEN      
 tcp        0      0 0.0.0.0:143             0.0.0.0:*               LISTEN      1847/dovecot
 #
 ```
+
