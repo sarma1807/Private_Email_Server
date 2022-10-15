@@ -51,6 +51,21 @@ relayhost = [host]
 smtpd_banner = $myhostname ESMTP $mail_name ($mail_version)
 ```
 
+Verify the postfix configuration file after above modifications :
+```
+cat /etc/postfix/main.cf | egrep "inet_interfaces|mynetworks_style|mynetworks|relayhost|smtpd_banner" | grep -v "#"
+```
+
+output on my server :
+```
+[root@mysmtp ~]# cat /etc/postfix/main.cf | egrep "inet_interfaces|mynetworks_style|mynetworks|relayhost|smtpd_banner" | grep -v "#"
+inet_interfaces = 192.168.1.171
+mynetworks_style = subnet
+relayhost = [host]
+smtpd_banner = $myhostname ESMTP $mail_name ($mail_version)
+[root@mysmtp ~]#
+```
+
 ---
 
 ### start postfix
