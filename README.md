@@ -43,3 +43,19 @@ thunderbird         : email client on Win0dows box
 
 ![Private_Email_Server_00_Arch.jpg](https://github.com/sarma1807/Private_Email_Server/blob/main/Screenshots/Private_Email_Server_00_Arch.jpg) <br><br>
 
+---
+
+### Latest Verification
+
+```
+# 15-October-2022
+# this is working properly with following software versions :
+
+Linux OS : CentOS Stream release 9 (5.14.0-171.el9.x86_64)
+postfix.x86_64     2:3.5.9-19.el9    @appstream
+curl.x86_64        7.76.1-19.el9     @anaconda
+libcurl.x86_64     7.76.1-19.el9     @anaconda
+sendmail.x86_64    8.16.1-10.el9     @appstream
+dovecot.x86_64     1:2.3.16-7.el9    @appstream
+Thunderbird 102.3.3 (64-bit)
+```
