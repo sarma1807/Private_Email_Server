@@ -20,7 +20,7 @@ We can use following software packages on Linux to configure a Private Email Ser
 postfix server      : receives email
 sendmail client     : sends email
 dovecot (imap/pop3) : allows email GUI client to pull email from server
-thunderbird         : email client on Win0dows box
+thunderbird         : email client on Windows box
 ```
 
 ---
