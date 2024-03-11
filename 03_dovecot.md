@@ -12,12 +12,21 @@ dnf list --installed | grep dovecot
 
 Check for all the available dovecot related packages :
 ```
-dnf search *dovecot*
+dnf search dovecot
 ```
 
 Install the dovecot package :
 ```
 dnf install dovecot --assumeyes
+```
+
+Verify - after installing dovecot packages :
+```
+sample output :
+
+# dnf list --installed | grep dovecot
+dovecot.x86_64                1:2.3.16-10.el9                @appstream
+#
 ```
 
 ---
