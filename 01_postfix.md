@@ -27,7 +27,6 @@ sample output :
 # dnf list --installed | grep postfix
 postfix.x86_64                2:3.5.9-24.el9                @appstream
 #
-
 ```
 
 ---

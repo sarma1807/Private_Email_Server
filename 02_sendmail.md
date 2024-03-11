@@ -41,7 +41,6 @@ sendmail.x86_64               8.16.1-11.el9           @appstream
 sendmail-cf.noarch            8.16.1-11.el9           @appstream
 sendmail-doc.noarch           8.16.1-11.el9           @appstream
 #
-
 ```
 
 ---
