@@ -12,12 +12,22 @@ dnf list --installed | grep postfix
 
 Check for all the available postfix related packages :
 ```
-dnf search *postfix*
+dnf search postfix
 ```
 
 Install all the postfix related packages :
 ```
 dnf install postfix* --assumeyes
+```
+
+Verify - after installing postfix packages :
+```
+sample output :
+
+# dnf list --installed | grep postfix
+postfix.x86_64                2:3.5.9-24.el9                @appstream
+#
+
 ```
 
 ---
@@ -103,12 +113,6 @@ tcp        0      0 192.168.1.171:25        0.0.0.0:*               LISTEN      
 ### mailbox & aliases
 
 #### ASSUMPTION : in this article, we assume that "dbadmin" user will receive emails
-
-create "dbadmin" user :
-```
-useradd dbadmin
-echo dbadmin:ILovePlayStation | chpasswd
-```
 
 emails for "dbadmin" user will be stored in following file :
 ```

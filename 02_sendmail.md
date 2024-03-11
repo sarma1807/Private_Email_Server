@@ -19,24 +19,29 @@ add following entries :
 
 Check if sendmail is already installed on the client VM :
 ```
-rpm -qa | grep sendmail
-# or
 dnf list --installed | grep sendmail
 ```
 
 Check for all the available sendmail related packages :
 ```
-yum list *sendmail*
-# or
-dnf search *sendmail*
+dnf search sendmail
 ```
 
 Install sendmail related packages :
 ```
-yum install sendmail --assumeyes
-yum install sendmail-cf --assumeyes
-# or
 dnf install sendmail* --assumeyes
+```
+
+Verify - after installing sendmail packages :
+```
+sample output :
+
+# dnf list --installed | grep sendmail
+sendmail.x86_64               8.16.1-11.el9           @appstream
+sendmail-cf.noarch            8.16.1-11.el9           @appstream
+sendmail-doc.noarch           8.16.1-11.el9           @appstream
+#
+
 ```
 
 ---
