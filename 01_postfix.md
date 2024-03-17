@@ -17,7 +17,7 @@ dnf search postfix
 
 Install all the postfix related packages :
 ```
-dnf install postfix* --assumeyes
+dnf install postfix --assumeyes
 ```
 
 Verify - after installing postfix packages :
@@ -112,6 +112,12 @@ tcp        0      0 192.168.1.171:25        0.0.0.0:*               LISTEN      
 ### mailbox & aliases
 
 #### ASSUMPTION : in this article, we assume that "dbadmin" user will receive emails
+
+create the "dbadmin" os user :
+```
+useradd dbadmin
+echo dbadmin:ILovePlayStation | chpasswd
+```
 
 emails for "dbadmin" user will be stored in following file :
 ```
