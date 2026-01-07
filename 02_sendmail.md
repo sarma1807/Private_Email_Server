@@ -102,8 +102,13 @@ systemctl start  sendmail.service
 
 ---
 
-send a test email :
+send a simple test email (without email body) :
 ```
 echo "Subject: `hostname -s` sendmail test" | sendmail -v info@mysmtp.OracleByExample.com
+```
+
+send a simple test email (with email body) :
+```
+echo -e "From: info@mysmtp.OracleByExample.com\nTo: info@mysmtp.OracleByExample.com\nSubject: Subject: `hostname -s` sendmail test\nContent-Type: text/html\n\nMore detailed message goes here ..." | sendmail -v info@mysmtp.OracleByExample.com
 ```
 
