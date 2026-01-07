@@ -109,6 +109,6 @@ echo "Subject: `hostname -s` sendmail test" | sendmail -v info@mysmtp.OracleByEx
 
 send a simple test email (with email body) :
 ```
-echo -e "From: info@mysmtp.OracleByExample.com\nTo: info@mysmtp.OracleByExample.com\nSubject: Subject: `hostname -s` sendmail test\nContent-Type: text/html\n\nMore detailed message goes here ..." | sendmail -v info@mysmtp.OracleByExample.com
+echo -e "From: info@mysmtp.OracleByExample.com\nTo: info@mysmtp.OracleByExample.com\nSubject: `hostname -s` sendmail test\nContent-Type: text/html\n\nMore detailed message goes here ..." | sendmail -v info@mysmtp.OracleByExample.com
 ```
 
