@@ -48,6 +48,18 @@ thunderbird         : email client on Windows box
 ### Latest Verification
 
 ```
+# 09-Jan-2026
+# this is working properly with following software versions :
+
+Linux OS : Rocky Linux release 9.7 (Blue Onyx) (5.14.0-611.16.1.el9_7.x86_64)
+postfix.x86_64     2:3.5.25-1.el9       @appstream
+curl.x86_64        7.76.1-34.el9        @baseos
+sendmail.x86_64    8.16.1-11.el9        @appstream
+dovecot.x86_64     1:2.3.16-15.el9      @appstream
+Thunderbird 146.0.1 (64-bit)
+```
+
+```
 # 04-May-2023
 # this is working properly with following software versions :
 
@@ -57,19 +69,6 @@ curl.x86_64        7.76.1-19.el9_1.1    @baseos
 sendmail.x86_64    8.16.1-10.el9        @appstream
 dovecot.x86_64     1:2.3.16-7.el9       @appstream
 Thunderbird 102.10.1 (64-bit)
-```
-
-```
-# 15-October-2022
-# this is working properly with following software versions :
-
-Linux OS : CentOS Stream release 9 (5.14.0-171.el9.x86_64)
-postfix.x86_64     2:3.5.9-19.el9    @appstream
-curl.x86_64        7.76.1-19.el9     @anaconda
-libcurl.x86_64     7.76.1-19.el9     @anaconda
-sendmail.x86_64    8.16.1-10.el9     @appstream
-dovecot.x86_64     1:2.3.16-7.el9    @appstream
-Thunderbird 102.3.3 (64-bit)
 ```
 
 ---
